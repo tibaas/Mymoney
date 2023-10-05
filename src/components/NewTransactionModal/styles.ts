@@ -83,7 +83,7 @@ export const TransationType = styled(RadioGroup.Root)`
 
 `
 interface TransactionTypeButtonProps {
-    variant: 'Income' | 'Outcome'
+    variant: 'income' | 'outcome'
 }
 
 export const TransactionTypeButton = styled(RadioGroup.Item)<TransactionTypeButtonProps>`
@@ -99,7 +99,7 @@ export const TransactionTypeButton = styled(RadioGroup.Item)<TransactionTypeButt
     color: ${props => props.theme['gray-300']};
 
     svg {
-        color:${props => props.variant === 'Income' ? props.theme['green-300'] : props.theme['red-300'] 
+        color:${props => props.variant === 'income' ? props.theme['green-300'] : props.theme['red-300'] 
     }};
 
     &[data-state="unchecked"]:hover {
@@ -109,7 +109,8 @@ export const TransactionTypeButton = styled(RadioGroup.Item)<TransactionTypeButt
 
     &[data-state='checked'] {
         color: ${props => props.theme.white};
-        background: ${props => props.variant === 'Income' ? props.theme["green-500"] : props.theme["red-500"]};
+        background: ${props => props.variant === 'income' ? props.theme["green-500"] : props.theme["red-500"]};
+        
         &:focus {
             box-shadow: 0 0 0 2px ${props => props.theme['gray-800']};
         }
